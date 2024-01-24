@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df84cf9db51d1f44870894ea09705ac, type: 3}
+  m_Name: ScorpionNippersSO
+  m_EditorClassIdentifier: 
+  Id: ScorpionNippers
+  DisplayName: "\uC9D1\uAC8C\uBC1C"
+  ItemSprite: {fileID: 21300000, guid: 1c30a2e348661e24bba0876af6f62a33, type: 3}
+  MaxStackSize: 99
+  Consumable: 0
+  VisualWorldPrefab: {fileID: 6134348470145579435, guid: 8d50a709083d7714c8dea50e34f1dcbc, type: 3}
+  UIPrefab: {fileID: 5112790193744078776, guid: d8e8ed71d07d13b4cb8177eb66d6edc2, type: 3}
+  UseSound: []
+  Description: "\uC9D1\uAC8C\uB9E8\uC758 \uAC15\uB825\uD588\uB358 \uC55E \uBC1C\uC774\uB2E4.
+    \uC774\uAC83\uB3C4 \uD0D5\uD6C4\uB8E8\uB85C \uB9CC\uB4E4 \uC218 \uC788\uC744\uAE4C?"
+  Usage: "\uC2DD\uC7AC\uB8CC"
+  RecoveryHP: 0
+  RecoveryHunger: 0

@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 7a324d800ac1b7c46a427fcecd06db90
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 64
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 0
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638409239754652544
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: kangaroo_Frame_0
+    originalName: 
+    pivot: {x: 0.50602406, y: 0.5185185}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 234
+      width: 83
+      height: 108
+    spriteID: 77984ef8983bd074da6fe6d50b5252cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 234}
+  - name: kangaroo_Frame_1
+    originalName: 
+    pivot: {x: 0.50602406, y: 0.5233645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 186
+      y: 234
+      width: 83
+      height: 107
+    spriteID: 81572f3685c5aa444980ceb32236ef04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 186, y: 234}
+  - name: kangaroo_Frame_2
+    originalName: 
+    pivot: {x: 0.50602406, y: 0.5283019}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 113
+      y: 120
+      width: 83
+      height: 106
+    spriteID: 7427c28e7847bcd43b4e0b4c4f0cb67e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 113, y: 120}
+  - name: kangaroo_Frame_3
+    originalName: 
+    pivot: {x: 0.50602406, y: 0.5233645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 277
+      y: 234
+      width: 83
+      height: 107
+    spriteID: bb3a5dde7cff4d44cac0d48a4188540e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 277, y: 234}
+  - name: kangaroo_Frame_4
+    originalName: 
+    pivot: {x: 0.50602406, y: 0.5185185}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 234
+      width: 83
+      height: 108
+    spriteID: 26286c657ac6e6b4a8d39d7ad59791fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 234}
+  - name: kangaroo_Frame_5
+    originalName: 
+    pivot: {x: 0.50602406, y: 0.5233645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 368
+      y: 234
+      width: 83
+      height: 107
+    spriteID: 9a4af90e7a5a3014c8a8675833d8f099
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 368, y: 234}
+  - name: kangaroo_Frame_6
+    originalName: 
+    pivot: {x: 0.50602406, y: 0.5283019}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 120
+      width: 83
+      height: 106
+    spriteID: d657c51a3e4baca458404baa920a4b9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 120}
+  - name: kangaroo_Frame_7
+    originalName: 
+    pivot: {x: 0.50602406, y: 0.5233645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 350
+      width: 83
+      height: 107
+    spriteID: 5199fad65e5e3ac41ad1e402e7bfced5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 350}
+  - name: kangaroo_Frame_8
+    originalName: 
+    pivot: {x: 0.6138614, y: 0.5283019}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 120
+      width: 101
+      height: 106
+    spriteID: 2ac6ee73771810543b06cffdc485411c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 120}
+  - name: kangaroo_Frame_9
+    originalName: 
+    pivot: {x: 0.5254237, y: 0.5185185}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 134
+      y: 4
+      width: 118
+      height: 108
+    spriteID: 3fdaff76fbe86c64999dc45955d40cba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 134, y: 4}
+  - name: kangaroo_Frame_10
+    originalName: 
+    pivot: {x: 0.52459013, y: 0.5185185}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 122
+      height: 108
+    spriteID: cf2a7f49284256545a233ab96e6a7031
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: kangaroo_Frame_11
+    originalName: 
+    pivot: {x: 0.5263158, y: 0.5185185}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 4
+      width: 114
+      height: 108
+    spriteID: 55788c45940375f4f8358a837bbbeb47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 4}
+  - name: kangaroo_Frame_12
+    originalName: 
+    pivot: {x: 0.5420561, y: 0.5185185}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 382
+      y: 4
+      width: 107
+      height: 108
+    spriteID: 64bb67bfabd061242a820af7430d8f9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 382, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1661892428
+    name: kangaroo
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: kangaroo_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 22
+        y: 8
+        width: 83
+        height: 108
+      spriteId: 77984ef8983bd074da6fe6d50b5252cd
+    - name: kangaroo_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 22
+        y: 8
+        width: 83
+        height: 107
+      spriteId: 81572f3685c5aa444980ceb32236ef04
+    - name: kangaroo_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 22
+        y: 8
+        width: 83
+        height: 106
+      spriteId: 7427c28e7847bcd43b4e0b4c4f0cb67e
+    - name: kangaroo_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 22
+        y: 8
+        width: 83
+        height: 107
+      spriteId: bb3a5dde7cff4d44cac0d48a4188540e
+    - name: kangaroo_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 22
+        y: 8
+        width: 83
+        height: 108
+      spriteId: 26286c657ac6e6b4a8d39d7ad59791fe
+    - name: kangaroo_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 22
+        y: 8
+        width: 83
+        height: 107
+      spriteId: 9a4af90e7a5a3014c8a8675833d8f099
+    - name: kangaroo_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 22
+        y: 8
+        width: 83
+        height: 106
+      spriteId: d657c51a3e4baca458404baa920a4b9b
+    - name: kangaroo_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 22
+        y: 8
+        width: 83
+        height: 107
+      spriteId: 5199fad65e5e3ac41ad1e402e7bfced5
+    - name: kangaroo_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 2
+        y: 8
+        width: 101
+        height: 106
+      spriteId: 2ac6ee73771810543b06cffdc485411c
+    - name: kangaroo_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 2
+        y: 8
+        width: 118
+        height: 108
+      spriteId: 3fdaff76fbe86c64999dc45955d40cba
+    - name: kangaroo_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 8
+        width: 122
+        height: 108
+      spriteId: cf2a7f49284256545a233ab96e6a7031
+    - name: kangaroo_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 4
+        y: 8
+        width: 114
+        height: 108
+      spriteId: 55788c45940375f4f8358a837bbbeb47
+    - name: kangaroo_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 6
+        y: 8
+        width: 107
+        height: 108
+      spriteId: 64bb67bfabd061242a820af7430d8f9b
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}

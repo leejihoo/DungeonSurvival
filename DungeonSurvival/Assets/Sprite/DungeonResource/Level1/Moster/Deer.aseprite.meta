@@ -1,0 +1,948 @@
+fileFormatVersion: 2
+guid: 179911c4b0fff354bb4a130fc14eb1ea
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Deer_Frame_0
+    originalName: 
+    pivot: {x: 0.48453608, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 194
+      height: 189
+    spriteID: 83c15f7ab05bae848b499b021317f239
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Deer_Frame_1
+    originalName: 
+    pivot: {x: 0.4818653, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 380
+      y: 198
+      width: 193
+      height: 185
+    spriteID: 32698d5c83314854fab427d5eed651b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 380, y: 198}
+  - name: Deer_Frame_2
+    originalName: 
+    pivot: {x: 0.47368422, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 380
+      y: 391
+      width: 190
+      height: 185
+    spriteID: 8b7c3fefde67b444784edc52c27ad417
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 380, y: 391}
+  - name: Deer_Frame_3
+    originalName: 
+    pivot: {x: 0.4818653, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 380
+      y: 4
+      width: 193
+      height: 186
+    spriteID: 0d615b06aa0ca1d4cb4b04ed5d33a34b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 380, y: 4}
+  - name: Deer_Frame_4
+    originalName: 
+    pivot: {x: 0.48453608, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 201
+      width: 194
+      height: 189
+    spriteID: eebef1e85e2695a48896fed2ac0e4a88
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 201}
+  - name: Deer_Frame_5
+    originalName: 
+    pivot: {x: 0.48453608, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 398
+      width: 194
+      height: 189
+    spriteID: 2d02c84e2bac6fc4cadc71129ff9dbd5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 398}
+  - name: Deer_Frame_6
+    originalName: 
+    pivot: {x: 0.55421686, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 1587
+      width: 166
+      height: 189
+    spriteID: cfe84c1cd08643547982d1b527f50794
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 1587}
+  - name: Deer_Frame_7
+    originalName: 
+    pivot: {x: 0.55421686, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 1784
+      width: 166
+      height: 189
+    spriteID: 9a513483390b146409c98ea1adb3a459
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 1784}
+  - name: Deer_Frame_8
+    originalName: 
+    pivot: {x: 0.55421686, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 380
+      y: 584
+      width: 166
+      height: 189
+    spriteID: 7ad0c07f9eb0f6e46a685ecba21d5b57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 380, y: 584}
+  - name: Deer_Frame_9
+    originalName: 
+    pivot: {x: 0.5421687, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 1366
+      width: 166
+      height: 213
+    spriteID: ebe147d61cfef6b45b6918689631feb3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 1366}
+  - name: Deer_Frame_10
+    originalName: 
+    pivot: {x: 0.5421687, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 595
+      width: 166
+      height: 219
+    spriteID: ac93875a35bebcd4cb284e349fe5a8da
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 595}
+  - name: Deer_Frame_11
+    originalName: 
+    pivot: {x: 0.5421687, y: -0.01369863}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 822
+      width: 166
+      height: 219
+    spriteID: 457c2d426b41ab24d9042959e9465e4a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 822}
+  - name: Deer_Frame_12
+    originalName: 
+    pivot: {x: 0.5421687, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1049
+      width: 166
+      height: 219
+    spriteID: 2845a10a48fc71c4181c51cc7c0beb23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1049}
+  - name: Deer_Frame_13
+    originalName: 
+    pivot: {x: 0.5421687, y: -0.01369863}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1276
+      width: 166
+      height: 219
+    spriteID: 3a6ed15ffdbae724ba4ea6f185605984
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1276}
+  - name: Deer_Frame_14
+    originalName: 
+    pivot: {x: 0.5421687, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1503
+      width: 166
+      height: 219
+    spriteID: a7e7683eeeded5844968efbfda32c32e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1503}
+  - name: Deer_Frame_15
+    originalName: 
+    pivot: {x: 0.5421687, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1730
+      width: 166
+      height: 219
+    spriteID: c20a7ae14be440b4e8ac8a7bbd5be229
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1730}
+  - name: Deer_Frame_16
+    originalName: 
+    pivot: {x: 0.5421687, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 4
+      width: 166
+      height: 219
+    spriteID: 8eef3919808f7ef4c8dd62ffc43956c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 4}
+  - name: Deer_Frame_17
+    originalName: 
+    pivot: {x: 0.5421687, y: -0.01369863}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 231
+      width: 166
+      height: 219
+    spriteID: 93ac84e6c6206c84bbf483797acffeba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 231}
+  - name: Deer_Frame_18
+    originalName: 
+    pivot: {x: 0.5421687, y: -0.01369863}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 458
+      width: 166
+      height: 219
+    spriteID: 157417f4ac6cdb04384b267d40f0cfc2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 458}
+  - name: Deer_Frame_19
+    originalName: 
+    pivot: {x: 0.5421687, y: -0.022831049}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 685
+      width: 166
+      height: 219
+    spriteID: d8d5cfc829bf3c248b10cb06308414c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 685}
+  - name: Deer_Frame_20
+    originalName: 
+    pivot: {x: 0.5421687, y: -0.00456621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 912
+      width: 166
+      height: 219
+    spriteID: 66653abd11ce2134bb820563242a686d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 912}
+  - name: Deer_Frame_21
+    originalName: 
+    pivot: {x: 0.5421687, y: -0.00456621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 1139
+      width: 166
+      height: 219
+    spriteID: 2988dcea65057b641a85c8fa481b12a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 1139}
+  - name: Deer_Frame_22
+    originalName: 
+    pivot: {x: 0.48051947, y: -1.0864198}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 380
+      y: 781
+      width: 77
+      height: 81
+    spriteID: cde27213c26110c4e9bdd9b3251783f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 380, y: 781}
+  - name: Deer_Frame_23
+    originalName: 
+    pivot: {x: 0.47560975, y: -1.1265823}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1957
+      width: 82
+      height: 79
+    spriteID: 550d374e43052874f92c98db6fd7094d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1957}
+  - name: Deer_Frame_24
+    originalName: 
+    pivot: {x: 0.5063291, y: -1.1265823}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 94
+      y: 1957
+      width: 79
+      height: 79
+    spriteID: 8edcfe27e0d39f746af93597af3c6842
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 94, y: 1957}
+  - name: Deer_Frame_25
+    originalName: 
+    pivot: {x: 0.5063291, y: -1.3571428}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 465
+      y: 947
+      width: 79
+      height: 70
+    spriteID: 09439ff5794cef747bd082886b256a89
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 465, y: 947}
+  - name: Deer_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: -1.263889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 465
+      y: 867
+      width: 78
+      height: 72
+    spriteID: 5fc94458da54cd94e98a578bb111d76e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 465, y: 867}
+  - name: Deer_Frame_27
+    originalName: 
+    pivot: {x: 0.49315068, y: -1.3571428}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 465
+      y: 1025
+      width: 73
+      height: 70
+    spriteID: 3fd18ab4db24a4d40b3cf9cbda58074d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 465, y: 1025}
+  - name: Deer_Frame_28
+    originalName: 
+    pivot: {x: 0.4871795, y: -1.1538461}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 465
+      y: 781
+      width: 78
+      height: 78
+    spriteID: 7eb15802fc05c7e47acc6343ed3ecd56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 465, y: 781}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -201242618
+    name: Deer
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Deer_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 34
+        y: 0
+        width: 194
+        height: 189
+      spriteId: 83c15f7ab05bae848b499b021317f239
+    - name: Deer_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 35
+        y: 0
+        width: 193
+        height: 185
+      spriteId: 32698d5c83314854fab427d5eed651b0
+    - name: Deer_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 38
+        y: 0
+        width: 190
+        height: 185
+      spriteId: 8b7c3fefde67b444784edc52c27ad417
+    - name: Deer_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 35
+        y: 0
+        width: 193
+        height: 186
+      spriteId: 0d615b06aa0ca1d4cb4b04ed5d33a34b
+    - name: Deer_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 34
+        y: 0
+        width: 194
+        height: 189
+      spriteId: eebef1e85e2695a48896fed2ac0e4a88
+    - name: Deer_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 34
+        y: 0
+        width: 194
+        height: 189
+      spriteId: 2d02c84e2bac6fc4cadc71129ff9dbd5
+    - name: Deer_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 36
+        y: 0
+        width: 166
+        height: 189
+      spriteId: cfe84c1cd08643547982d1b527f50794
+    - name: Deer_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 36
+        y: 0
+        width: 166
+        height: 189
+      spriteId: 9a513483390b146409c98ea1adb3a459
+    - name: Deer_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 36
+        y: 0
+        width: 166
+        height: 189
+      spriteId: 7ad0c07f9eb0f6e46a685ecba21d5b57
+    - name: Deer_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 38
+        y: 0
+        width: 166
+        height: 213
+      spriteId: ebe147d61cfef6b45b6918689631feb3
+    - name: Deer_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 38
+        y: 0
+        width: 166
+        height: 219
+      spriteId: ac93875a35bebcd4cb284e349fe5a8da
+    - name: Deer_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 38
+        y: 3
+        width: 166
+        height: 219
+      spriteId: 457c2d426b41ab24d9042959e9465e4a
+    - name: Deer_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 38
+        y: 0
+        width: 166
+        height: 219
+      spriteId: 2845a10a48fc71c4181c51cc7c0beb23
+    - name: Deer_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 38
+        y: 3
+        width: 166
+        height: 219
+      spriteId: 3a6ed15ffdbae724ba4ea6f185605984
+    - name: Deer_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 38
+        y: 0
+        width: 166
+        height: 219
+      spriteId: a7e7683eeeded5844968efbfda32c32e
+    - name: Deer_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 38
+        y: 0
+        width: 166
+        height: 219
+      spriteId: c20a7ae14be440b4e8ac8a7bbd5be229
+    - name: Deer_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 38
+        y: 0
+        width: 166
+        height: 219
+      spriteId: 8eef3919808f7ef4c8dd62ffc43956c9
+    - name: Deer_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 38
+        y: 3
+        width: 166
+        height: 219
+      spriteId: 93ac84e6c6206c84bbf483797acffeba
+    - name: Deer_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 38
+        y: 3
+        width: 166
+        height: 219
+      spriteId: 157417f4ac6cdb04384b267d40f0cfc2
+    - name: Deer_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 38
+        y: 5
+        width: 166
+        height: 219
+      spriteId: d8d5cfc829bf3c248b10cb06308414c1
+    - name: Deer_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 38
+        y: 1
+        width: 166
+        height: 219
+      spriteId: 66653abd11ce2134bb820563242a686d
+    - name: Deer_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 38
+        y: 1
+        width: 166
+        height: 219
+      spriteId: 2988dcea65057b641a85c8fa481b12a6
+    - name: Deer_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 91
+        y: 88
+        width: 77
+        height: 81
+      spriteId: cde27213c26110c4e9bdd9b3251783f8
+    - name: Deer_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 89
+        y: 89
+        width: 82
+        height: 79
+      spriteId: 550d374e43052874f92c98db6fd7094d
+    - name: Deer_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 88
+        y: 89
+        width: 79
+        height: 79
+      spriteId: 8edcfe27e0d39f746af93597af3c6842
+    - name: Deer_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 88
+        y: 95
+        width: 79
+        height: 70
+      spriteId: 09439ff5794cef747bd082886b256a89
+    - name: Deer_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 89
+        y: 91
+        width: 78
+        height: 72
+      spriteId: 5fc94458da54cd94e98a578bb111d76e
+    - name: Deer_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 92
+        y: 95
+        width: 73
+        height: 70
+      spriteId: 3fd18ab4db24a4d40b3cf9cbda58074d
+    - name: Deer_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 90
+        y: 90
+        width: 78
+        height: 78
+      spriteId: 7eb15802fc05c7e47acc6343ed3ecd56
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 256, y: 256}
