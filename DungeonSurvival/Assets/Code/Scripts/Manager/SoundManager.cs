@@ -1,13 +1,11 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.SceneManagement;
 
 public class SoundManager : Singleton<SoundManager>
 {
+    #region Inspector Fields
+    
     public float mainVolume = 1.0f;
     public float bgmVolume = 1.0f;
     public float sfxVolume = 1.0f;
@@ -15,14 +13,24 @@ public class SoundManager : Singleton<SoundManager>
     [field: SerializeField] public AudioMixer Mixer { get; set; }
     [field: SerializeField] public AudioSource BgmSource { get; set; }
     [field: SerializeField] public AudioSource SfxReferenceSource { get; set; }
+    
     [SerializeField] private SoundSO commonMonsterSound;
+    
+    #endregion
+
+    #region Fields
+    
     private Queue<AudioSource> _sfxPool;
+    
+    #endregion
+
+    #region Life Cycle
     
     public override void Awake()
     {
         base.Awake();
 
-        const int PoolLength = 16;
+        int PoolLength = 16;
 
         _sfxPool = new Queue<AudioSource>();
 
@@ -37,14 +45,16 @@ public class SoundManager : Singleton<SoundManager>
         }
 
         commonMonsterSound.InitSoundDictionary();
-        
     }
     
-    // Start is called before the first frame update
     void Start()
     {
         UpdateVolume();
     }
+    
+    #endregion
+
+    #region Functions
     
     public void PlaySfxAt(Vector3 position, AudioClip clip, bool spatialized)
     {
@@ -81,4 +91,5 @@ public class SoundManager : Singleton<SoundManager>
         Mixer.SetFloat("BgmVolume", Mathf.Log10(Mathf.Max(0.0001f, bgmVolume)) * 30.0f);
     }
 
+    #endregion
 }
