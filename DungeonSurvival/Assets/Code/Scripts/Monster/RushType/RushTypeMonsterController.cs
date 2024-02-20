@@ -91,7 +91,7 @@ public class RushTypeMonsterController : NormalMonsterController
     {
         Detect();
         accumulationRushTime += Time.deltaTime;
-        accumulationChaseTime += Time.deltaTime;
+        _accumulationChaseTime += Time.deltaTime;
         
         if (accumulationRushTime >= rushDelay && !_isAttackStateExit)
         {

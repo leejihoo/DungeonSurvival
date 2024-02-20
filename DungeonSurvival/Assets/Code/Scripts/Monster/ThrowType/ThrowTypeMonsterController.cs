@@ -116,7 +116,7 @@ public class ThrowTypeMonsterController : NormalMonsterController
                     }
                 }
                 
-                accumulationChaseTime += Time.deltaTime;
+                _accumulationChaseTime += Time.deltaTime;
             }
         }
         

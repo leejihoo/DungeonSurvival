@@ -21,7 +21,7 @@ public class PatrolStrategy : MoveStrategy
 
     public override void Move()
     {
-        _mover.Translate(_logic.CalculatePatrolDistance(ref _movementChange, ref _moveDirection, _moveSpeed, _patrolRange, _mover.GetChild(0), OnOverPatrolRange));
+        _mover.Translate(_logic.CalculatePatrolMovementChange(ref _movementChange, ref _moveDirection, _moveSpeed, _patrolRange, _mover.GetChild(0), OnOverPatrolRange));
         
     }
 }
