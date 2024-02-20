@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df84cf9db51d1f44870894ea09705ac, type: 3}
+  m_Name: BowSO
+  m_EditorClassIdentifier: 
+  Id: Bow
+  DisplayName: "\uD65C"
+  ItemSprite: {fileID: -1076754218, guid: 7dbce889876c17e4b9e50ffef9a6f138, type: 3}
+  MaxStackSize: 99
+  Consumable: 0
+  VisualWorldPrefab: {fileID: 218439155913657774, guid: 3298dd4fcaf3f424086af23c6d46b37b, type: 3}
+  UIPrefab: {fileID: 1267007676105965369, guid: c29f059292e68ab4a9f2a140676257d9, type: 3}
+  UseSound: []
+  Description: "\uAC04\uB2E8\uD558\uAC8C \uB9CC\uB4E0 \uD65C\uC774\uB2E4."
+  Usage: "\uC7A5\uBE44"
+  RecoveryHP: 0
+  RecoveryHunger: 0

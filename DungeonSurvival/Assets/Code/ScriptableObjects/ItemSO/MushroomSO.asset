@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df84cf9db51d1f44870894ea09705ac, type: 3}
+  m_Name: MushroomSO
+  m_EditorClassIdentifier: 
+  Id: Mushroom
+  DisplayName: "\uC0C1\uCC98\uB09C \uB9C8\uBB3C"
+  ItemSprite: {fileID: -2141788766, guid: 9056bb04b3829b14cb3dd2b431918c1e, type: 3}
+  MaxStackSize: 99
+  Consumable: 0
+  VisualWorldPrefab: {fileID: 3363822635950992540, guid: 15b70df5a1f2a13469d530782fc2f117, type: 3}
+  UIPrefab: {fileID: 7518931219173420326, guid: 086fe75bb00ce7b478c4f0e24227251e, type: 3}
+  UseSound: []
+  Description: "\uC0C1\uCC98\uAC00 \uB09C \uB9C8\uBB3C\uC758 \uC2DC\uCCB4\uC774\uB2E4.
+    \uC0DD\uAE34\uAC8C \uBC84\uC12F\uCC98\uB7FC \uC0DD\uACBC\uB294\uB370 \uBA39\uC5B4
+    \uBCFC\uAE4C?"
+  Usage: "\uC2DD\uC7AC\uB8CC"
+  RecoveryHP: 0
+  RecoveryHunger: 0

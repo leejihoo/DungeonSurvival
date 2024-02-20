@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/Level0/BaseCamp.unity
+    path: Assets/Level/Scenes/Level0/BaseCamp.unity
     guid: a97d194a971b79d48aebbd3d9e8d3007
   - enabled: 1
-    path: Assets/Scene/Level1/GrassLandLevel1_0.unity
+    path: Assets/Level/Scenes/Level1/GrassLandLevel1_0.unity
     guid: aaa95b4e0215ef74ea2f56c9980ab3bd
   - enabled: 1
-    path: Assets/Scene/Level1/GrassLandLevel1_1.unity
+    path: Assets/Level/Scenes/Level1/GrassLandLevel1_1.unity
     guid: a3d2aac43c7b97b4fb15b66bb49135b1
   - enabled: 1
-    path: Assets/Scene/Level1/GrassLandLevel1_2.unity
+    path: Assets/Level/Scenes/Level1/GrassLandLevel1_2.unity
     guid: 8be2786e13e059b4bb50de23737966a1
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 03ef166d8e4f6ba4a8230bb367e08f81, type: 2}
