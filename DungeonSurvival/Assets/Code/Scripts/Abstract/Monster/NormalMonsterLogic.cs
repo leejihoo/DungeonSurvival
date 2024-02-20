@@ -1,10 +1,10 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class NormalMonsterLogic : MonoBehaviour
 {
+    #region Functions
+    
     public Vector3 VectorToTarget(Transform targetPos)
     {
         return targetPos.position - transform.position;
@@ -13,7 +13,6 @@ public abstract class NormalMonsterLogic : MonoBehaviour
     public float AngleToTarget(Transform targetPos, float visualDirection)
     {
         Vector3 vectorToTarget = VectorToTarget(targetPos);
-        
         float angleToTarget;
         
         if (visualDirection > 0)
@@ -32,9 +31,9 @@ public abstract class NormalMonsterLogic : MonoBehaviour
     {
         Vector3 vectorToTarget = VectorToTarget(targetPos);
         float angleToTarget = AngleToTarget(targetPos, visualDirection);
+        
         if (detectionRadius >= vectorToTarget.magnitude && detectionAngle >= angleToTarget)
         {
-            //Debug.Log("플레이어 감지!" + "거리: " + vectorToTarget.magnitude +", 각도: " + angleToTarget);
             return true;
         }
 
@@ -46,34 +45,32 @@ public abstract class NormalMonsterLogic : MonoBehaviour
         return Vector3.MoveTowards(transform.position, targetPos.position, speed * Time.deltaTime);
     }
 
-    public Vector3 CalculateDistance(float speed, float direction)
+    public Vector3 CalculateMovementChange(float speed, float direction)
     {
         return  speed * Time.deltaTime * direction * Vector3.left;
     }
 
-    public bool IsOverPatrolRange(ref float movementChange, float speed, float direction, float maxPatrolDistance)
+    public bool CheckIsOverPatrolRange(ref float movementChange, float speed, float direction, float maxPatrolDistance)
     {
-        Vector3 distance = CalculateDistance(speed, direction);
+        Vector3 distance = CalculateMovementChange(speed, direction);
         movementChange += distance.magnitude;
 
         return maxPatrolDistance < movementChange;
     }
 
-    public Vector3 CalculatePatrolDistance(ref float movementChange, ref float direction, float speed,  float maxPatrolDistance, Transform visual, Action onOverPatrolRange)
+    public Vector3 CalculatePatrolMovementChange(ref float movementChange, ref float direction, float speed,  float maxPatrolDistance, Transform visual, Action onOverPatrolRange)
     {
-        var distance = CalculateDistance(speed, direction);
-        var isOverPatrolRange = IsOverPatrolRange(ref movementChange, speed, direction, maxPatrolDistance);
+        var distance = CalculateMovementChange(speed, direction);
+        var isOverPatrolRange = CheckIsOverPatrolRange(ref movementChange, speed, direction, maxPatrolDistance);
 
         if (visual.localScale.x * direction < 0)
         {
             ChangeVisualDirection(visual);
-            //visual.localScale = Vector3.Scale(visual.localScale,new Vector3(-1,1,1));
         }
         
         if (isOverPatrolRange)
         {
             onOverPatrolRange.Invoke();
-            // visual.localScale = Vector3.Scale(visual.localScale,new Vector3(-1,1,1));
             direction *= -1;
             movementChange = 0;
             return distance * -1;
@@ -102,4 +99,6 @@ public abstract class NormalMonsterLogic : MonoBehaviour
     {
         return hp - damage;
     }
+    
+    #endregion
 }

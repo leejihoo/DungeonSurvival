@@ -1,11 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public abstract class StateMachine : IStateMachine
 {
+    #region Fields
+    
     public IState CurrentState;
     public IState NextState;
+    
+    #endregion
+
+    #region Functions
+    
     public void Init(IState initState)
     {
         CurrentState = initState;
@@ -31,4 +34,6 @@ public abstract class StateMachine : IStateMachine
             CurrentState.Update();    
         }
     }
+    
+    #endregion
 }

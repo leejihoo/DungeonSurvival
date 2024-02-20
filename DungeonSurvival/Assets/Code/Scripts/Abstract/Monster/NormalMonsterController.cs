@@ -1,13 +1,17 @@
-using System;
 using System.Collections;
-using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public abstract class NormalMonsterController : MonoBehaviour, INormalMonsterController, IDetectable, IDamageable, IChasable, ICollisionable, IPatrolable, IDropable, IDieable, IIdleable 
 {
+    #region Events
+    
     public UnityAction<int> OnDamage;
     public UnityAction OnDie;
+    
+    #endregion
+
+    #region Inspector fields
     
     [Header("초기 몬스터 정보")]
     public MonsterSO monsterSO;
@@ -22,8 +26,12 @@ public abstract class NormalMonsterController : MonoBehaviour, INormalMonsterCon
     [Header("누적 추격 시간")]
     [Tooltip("플레이어를 발견하거나 데미지를 입을 때 유저를 추격하는데 그 시간의 합이다. monterSO에서 설정한 chaseTime을 넘어가면 추격이 중단된다.")]
     [SerializeField]
-    protected float accumulationChaseTime;
+    protected float _accumulationChaseTime;
+    
+    #endregion
 
+    #region Fields
+    
     protected Transform _player;
     protected NormalMonsterStateMachine _stateMachine;
     protected NormalMonsterLogic _logic;
@@ -35,12 +43,20 @@ public abstract class NormalMonsterController : MonoBehaviour, INormalMonsterCon
     protected float _collisionDelay;
     protected float _idleTime;
     
+    #endregion
+
+    #region Enum
+    
     public enum StateType
     {
         Move,
         Attack,
         Idle
     }
+    
+    #endregion
+
+    #region Life Cycle
     
     protected virtual void Awake()
     {
@@ -54,7 +70,7 @@ public abstract class NormalMonsterController : MonoBehaviour, INormalMonsterCon
         
         _collisionDelay = 1f;
         _idleTime = 2f;
-        accumulationChaseTime = _model.ChaseTime;
+        _accumulationChaseTime = _model.ChaseTime;
         
         OnDamage += Damage;
         OnDie += Die;
@@ -91,119 +107,32 @@ public abstract class NormalMonsterController : MonoBehaviour, INormalMonsterCon
     {
         Collision(collision);
     }
+    
+    #endregion
 
+    #region Functions
+    
     private void SetLogicAndVisual()
     {
         _logic = GetComponentInChildren<NormalMonsterLogic>();
         _visual = GetComponentInChildren<NormalMonsterVisual>();
     }
-
-    protected virtual void SetMoveStrategy(MoveStrategy moveStrategy)
-    {
-        _currentMoveStrategy = moveStrategy;
-        // switch (moveStrategy.MoveType)
-        // {
-        //     case "Chase":
-        //         _currentMoveStrategy = _chaseStrategy;
-        //         break;
-        //     case "Patrol":
-        //         _currentMoveStrategy = _patrolStrategy;
-        //         break;
-        //     default:
-        //         Debug.Log("이동 타입을 설정해주세요.");
-        //         break;
-        // }
-    }
     
-    public virtual void Detect()
+    private void Alert()
     {
-        bool isDetect = _logic.IsTargetDetected(_player, transform.GetChild(0).localScale.x, _model.ViewDistance,
-            _model.PatrolFov);
-        
-        if (isDetect || accumulationChaseTime < _model.ChaseTime)
-        {
-            if (isDetect)
-            {
-                Alert();
-            }
-            
-            _stateMachine.TransitionTo(_stateMachine.NormalMonsterAttackState);
-            return;
-        }
-
-        if (_stateMachine.CurrentState == _stateMachine.NormalMonsterIdleState)
-        {
-            return;
-        }
-        
-        _stateMachine.TransitionTo(_stateMachine.NormalMonsterMoveState);
-        
-    }
-    
-    public virtual void Damage(int damage)
-    {
-        Debug.Log("몬스터 데미지 입음");
-        Alert();
-        _visual.Damage(damage);
-        _model.Hp = _logic.Damage(_model.Hp,damage);
-        if (_model.Hp <= 0)
-        {
-            _stateMachine.TransitionTo(_stateMachine.NormalMonsterDieState);
-        }
-    }
-    
-    public virtual void Chase()
-    {
-        SetMoveStrategy(_chaseStrategy);
-        _logic.ChangeVisualDirectionTowardTarget(transform.GetChild(0), _player, 1);
-        accumulationChaseTime += Time.deltaTime;
-        Move();
-    }
-
-    public void Alert()
-    {
-        accumulationChaseTime = 0;
+        _accumulationChaseTime = 0;
     }
 
     protected void Move()
     {
         _currentMoveStrategy.Move();
     }
-
-    public virtual void PlayCollisionSound(Vector3 targetPos)
+    
+    protected virtual void SetMoveStrategy(MoveStrategy moveStrategy)
     {
-        SoundManager.Instance.PlaySfxAt(targetPos,monsterSO.AttackSound,false);
+        _currentMoveStrategy = moveStrategy;
     }
     
-    public virtual void Collision(Collision2D col)
-    {
-        if (col.transform.CompareTag("Player") && !PlayerController._isDamaged && !_isCollision)
-        {
-            StartCoroutine(CollsionDelay());
-            PlayCollisionSound(col.transform.position);
-            PlayerController.OnDamage.Invoke(monsterSO.Atk, transform);
-        }
-    }
-
-    IEnumerator CollsionDelay()
-    {
-        _isCollision = true;
-        yield return new WaitForSeconds(_collisionDelay);
-        _isCollision = false;
-    }
-
-    public virtual void Patrol()
-    {
-        SetMoveStrategy(_patrolStrategy);
-        Move();
-    }
-    
-    public virtual void Drop()
-    {
-        var dropItem = (ItemSO)monsterSO.DropItem;
-        Instantiate(dropItem.VisualWorldPrefab, transform.position, transform.rotation);
-    }
-
     public void Idle()
     {
         _stateMachine.TransitionTo(_stateMachine.NormalMonsterIdleState);
@@ -223,14 +152,79 @@ public abstract class NormalMonsterController : MonoBehaviour, INormalMonsterCon
     {
         _visual.PlayIdleAnimation(prevStateType);
     }
+    
+    #endregion
 
-    protected IEnumerator StartIdleTimer()
+    #region Virtual Functions
+    
+    public virtual void Detect()
     {
-        yield return new WaitForSeconds(_idleTime);
+        bool isDetect = _logic.IsTargetDetected(_player, transform.GetChild(0).localScale.x, _model.ViewDistance,
+            _model.PatrolFov);
+        
+        if (isDetect || _accumulationChaseTime < _model.ChaseTime)
+        {
+            if (isDetect)
+            {
+                Alert();
+            }
+            
+            _stateMachine.TransitionTo(_stateMachine.NormalMonsterAttackState);
+            return;
+        }
+
         if (_stateMachine.CurrentState == _stateMachine.NormalMonsterIdleState)
         {
-            _stateMachine.TransitionTo(_stateMachine.NormalMonsterMoveState);
+            return;
         }
+        
+        _stateMachine.TransitionTo(_stateMachine.NormalMonsterMoveState);
+    }
+    
+    public virtual void Damage(int damage)
+    {
+        Alert();
+        _visual.Damage(damage);
+        _model.Hp = _logic.Damage(_model.Hp,damage);
+        if (_model.Hp <= 0)
+        {
+            _stateMachine.TransitionTo(_stateMachine.NormalMonsterDieState);
+        }
+    }
+    
+    public virtual void Chase()
+    {
+        SetMoveStrategy(_chaseStrategy);
+        _logic.ChangeVisualDirectionTowardTarget(transform.GetChild(0), _player, 1);
+        _accumulationChaseTime += Time.deltaTime;
+        Move();
+    }
+    
+    public virtual void PlayCollisionSound(Vector3 targetPos)
+    {
+        SoundManager.Instance.PlaySfxAt(targetPos,monsterSO.AttackSound,false);
+    }
+    
+    public virtual void Collision(Collision2D col)
+    {
+        if (col.transform.CompareTag("Player") && !PlayerController._isDamaged && !_isCollision)
+        {
+            StartCoroutine(CollsionDelay());
+            PlayCollisionSound(col.transform.position);
+            PlayerController.OnDamage.Invoke(monsterSO.Atk, transform);
+        }
+    }
+    
+    public virtual void Patrol()
+    {
+        SetMoveStrategy(_patrolStrategy);
+        Move();
+    }
+    
+    public virtual void Drop()
+    {
+        var dropItem = (ItemSO)monsterSO.DropItem;
+        Instantiate(dropItem.VisualWorldPrefab, transform.position, transform.rotation);
     }
     
     public virtual void PlayDieAnimation()
@@ -257,6 +251,28 @@ public abstract class NormalMonsterController : MonoBehaviour, INormalMonsterCon
     {
         SoundManager.Instance.PlayCommonMonsterSfxAt(transform.position,"Detect",false);
     }
+    
+    #endregion
+
+    #region Coroutine
+
+    IEnumerator CollsionDelay()
+    {
+        _isCollision = true;
+        yield return new WaitForSeconds(_collisionDelay);
+        _isCollision = false;
+    }
+    
+    protected IEnumerator StartIdleTimer()
+    {
+        yield return new WaitForSeconds(_idleTime);
+        if (_stateMachine.CurrentState == _stateMachine.NormalMonsterIdleState)
+        {
+            _stateMachine.TransitionTo(_stateMachine.NormalMonsterMoveState);
+        }
+    }
+
+    #endregion
     
     #region StateVirtualFunc
 
@@ -321,5 +337,4 @@ public abstract class NormalMonsterController : MonoBehaviour, INormalMonsterCon
     }
     
     #endregion
-    
 }

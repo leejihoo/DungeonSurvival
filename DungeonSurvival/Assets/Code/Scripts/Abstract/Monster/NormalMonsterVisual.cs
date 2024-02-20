@@ -1,21 +1,30 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-using Script.PluggableProgrammingTest;
 
 public abstract class NormalMonsterVisual : MonoBehaviour
 {
+    #region Fields
+    
     protected Animator animator;
     protected Image warningMark;
     protected TMP_Text hp;
-    
     protected int _detectHash;
     protected int _patrolOverHash;
-    [SerializeField] private Material outlineMaterial;
+    
     private Material baseMaterial;
+    
+    #endregion
+
+    #region Inspector Fields
+
+    [SerializeField] private Material outlineMaterial;
+    
+    #endregion
+
+    #region Life cycle
     
     protected virtual void Awake()
     {
@@ -39,33 +48,11 @@ public abstract class NormalMonsterVisual : MonoBehaviour
         baseMaterial = GetComponent<SpriteRenderer>().material;
     }
 
-    public IEnumerator Die(Action action)
-    {
-        Color current = GetComponent<SpriteRenderer>().color;
-        while (current.a >= 0.3)
-        {
-            current.a -= 0.01f;
-            GetComponent<SpriteRenderer>().color = current;
-            yield return new WaitForSeconds(0.01f);
-        }
-        
-        action.Invoke();
-    }
-
-    public void Damage(int damage)
-    {
-        StartCoroutine(DamageEffect());
-        ChangeHp(-damage);
-    }
+    #endregion
     
-    public IEnumerator DamageEffect()
-    {
-        GetComponent<SpriteRenderer>().color = new Color(1,0.7f,0.7f,1);
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-    }
+    #region Functions
     
-    public virtual void PlayAttackAnimation(NormalMonsterController.StateType prevStateType)
+    public void PlayAttackAnimation(NormalMonsterController.StateType prevStateType)
     {
         switch (prevStateType)
         {
@@ -75,7 +62,7 @@ public abstract class NormalMonsterVisual : MonoBehaviour
         }
     }
     
-    public virtual void PlayMoveAnimation(NormalMonsterController.StateType prevStateType)
+    public void PlayMoveAnimation(NormalMonsterController.StateType prevStateType)
     {
         switch (prevStateType)
         {
@@ -88,7 +75,7 @@ public abstract class NormalMonsterVisual : MonoBehaviour
         }
     }
 
-    public virtual void PlayIdleAnimation(NormalMonsterController.StateType prevStateType)
+    public void PlayIdleAnimation(NormalMonsterController.StateType prevStateType)
     {
         switch (prevStateType)
         {
@@ -96,7 +83,12 @@ public abstract class NormalMonsterVisual : MonoBehaviour
                 animator.SetBool(_patrolOverHash, true);
                 break;
         }
-        
+    }
+    
+    public void Damage(int damage)
+    {
+        StartCoroutine(DamageEffect());
+        ChangeHp(-damage);
     }
 
     public void InitHp(int hp)
@@ -124,4 +116,30 @@ public abstract class NormalMonsterVisual : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().material = baseMaterial;
     }
+    
+    #endregion
+
+    #region Coroutine
+    
+    public IEnumerator Die(Action action)
+    {
+        Color current = GetComponent<SpriteRenderer>().color;
+        while (current.a >= 0.3)
+        {
+            current.a -= 0.01f;
+            GetComponent<SpriteRenderer>().color = current;
+            yield return new WaitForSeconds(0.01f);
+        }
+        
+        action.Invoke();
+    }
+    
+    public IEnumerator DamageEffect()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(1,0.7f,0.7f,1);
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+    }
+    
+    #endregion
 }
