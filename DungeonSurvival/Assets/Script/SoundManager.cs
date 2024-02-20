@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
-public class SoundManager : Sigleton<SoundManager>
+public class SoundManager : Singleton<SoundManager>
 {
     public float mainVolume = 1.0f;
     public float bgmVolume = 1.0f;
@@ -11,30 +14,36 @@ public class SoundManager : Sigleton<SoundManager>
 
     [field: SerializeField] public AudioMixer Mixer { get; set; }
     [field: SerializeField] public AudioSource BgmSource { get; set; }
-    [field: SerializeField] private AudioSource SfxReferenceSource { get; set; }
+    [field: SerializeField] public AudioSource SfxReferenceSource { get; set; }
     [SerializeField] private SoundSO commonMonsterSound;
     private Queue<AudioSource> _sfxPool;
-       
+    
+    
+
     public override void Awake()
     {
         base.Awake();
-        
+
         const int PoolLength = 16;
 
         _sfxPool = new Queue<AudioSource>();
-        
+
         GameObject pool = new GameObject("SFXPool");
         pool.transform.SetParent(transform);
-        
+
         for (int i = 0; i < PoolLength; ++i)
         {
-            var source = Instantiate(SfxReferenceSource,pool.transform);
+            var source = Instantiate(SfxReferenceSource, pool.transform);
 
             _sfxPool.Enqueue(source);
         }
-        
+
         commonMonsterSound.InitSoundDictionary();
+        
+        
+        
     }
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +51,8 @@ public class SoundManager : Sigleton<SoundManager>
         UpdateVolume();
     }
 
+    
+    
     public void PlaySfxAt(Vector3 position, AudioClip clip, bool spatialized)
     {
         var source = _sfxPool.Dequeue();

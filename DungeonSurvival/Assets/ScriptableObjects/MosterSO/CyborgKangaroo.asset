@@ -22,7 +22,8 @@ MonoBehaviour:
   <DropItem>k__BackingField: {fileID: 11400000, guid: c586e7b45b511c84181bcafd3c2b9103, type: 2}
   <PatrolRange>k__BackingField: 5
   <PatrolFov>k__BackingField: 45
-  <ChaseTime>k__BackingField: 0
+  <ChaseTime>k__BackingField: 5
   <ViewDistance>k__BackingField: 5
   <DeadSound>k__BackingField: {fileID: 8300000, guid: eed282cb9abb7914b8f2d970933b05bc, type: 3}
   <AttackSound>k__BackingField: {fileID: 8300000, guid: 5f03c8f81a7bfd2468b55a861c1bee68, type: 3}
+  <AttackRange>k__BackingField: 0

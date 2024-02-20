@@ -92,6 +92,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: f1385fa0edea42f42aef67e9960a45d8, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 6d9835efc97edb94fae1fb810df308a4, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 661308622, guid: d0c4b8ceef6b30e419d8af5ef31de139, type: 3}
@@ -101,6 +103,8 @@ Tilemap:
     m_Data: {fileID: -1158390248, guid: 043bd60092549d845be7dfb6f92b4472, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 196814287, guid: d0c4b8ceef6b30e419d8af5ef31de139, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 4
     m_Data:
@@ -126,8 +130,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -1, y: -1, z: 0}
-  m_Size: {x: 7, y: 1, z: 1}
+  m_Origin: {x: -1, y: -3, z: 0}
+  m_Size: {x: 7, y: 3, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -167,7 +171,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -241,7 +245,7 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &6023544287978582250
+--- !u!114 &7569300942267808188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

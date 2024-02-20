@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 64
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -74,7 +74,7 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
+    defaultPivotSpace: 1
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
@@ -86,7 +86,7 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
+    defaultPivotSpace: 1
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638438960296469021
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,8 +121,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Golem_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.09803922}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -141,8 +141,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Golem_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.099999994}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -161,8 +161,8 @@ ScriptedImporter:
     uvTransform: {x: 60, y: 4}
   - name: Golem_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.10204081}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -181,8 +181,8 @@ ScriptedImporter:
     uvTransform: {x: 60, y: 410}
   - name: Golem_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: -0.099999994}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -201,8 +201,8 @@ ScriptedImporter:
     uvTransform: {x: 60, y: 62}
   - name: Golem_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.09803922}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -221,8 +221,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 63}
   - name: Golem_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: -0.09803922}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -241,8 +241,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 122}
   - name: Golem_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: -0.099999994}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -261,8 +261,8 @@ ScriptedImporter:
     uvTransform: {x: 60, y: 120}
   - name: Golem_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: -0.10204081}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -281,8 +281,8 @@ ScriptedImporter:
     uvTransform: {x: 116, y: 4}
   - name: Golem_Frame_8
     originalName: 
-    pivot: {x: 0.5, y: -0.099999994}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -301,8 +301,8 @@ ScriptedImporter:
     uvTransform: {x: 60, y: 178}
   - name: Golem_Frame_9
     originalName: 
-    pivot: {x: 0.5, y: -0.09803922}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -321,8 +321,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 181}
   - name: Golem_Frame_10
     originalName: 
-    pivot: {x: 0.5208334, y: -0.09803922}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -341,8 +341,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 240}
   - name: Golem_Frame_11
     originalName: 
-    pivot: {x: 0.5208334, y: -0.099999994}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -361,8 +361,8 @@ ScriptedImporter:
     uvTransform: {x: 60, y: 236}
   - name: Golem_Frame_12
     originalName: 
-    pivot: {x: 0.5208334, y: -0.09803922}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -381,8 +381,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 299}
   - name: Golem_Frame_13
     originalName: 
-    pivot: {x: 0.5208334, y: -0.099999994}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -401,8 +401,8 @@ ScriptedImporter:
     uvTransform: {x: 60, y: 294}
   - name: Golem_Frame_14
     originalName: 
-    pivot: {x: 0.5208334, y: -0.09803922}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -421,8 +421,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 358}
   - name: Golem_Frame_15
     originalName: 
-    pivot: {x: 0.5208334, y: -0.099999994}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -441,8 +441,8 @@ ScriptedImporter:
     uvTransform: {x: 60, y: 352}
   - name: Golem_Frame_16
     originalName: 
-    pivot: {x: 0.5208334, y: -0.09803922}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -606,7 +606,55 @@ ScriptedImporter:
       spriteId: 33611d4eb711a0946af43846370bb17b
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}

@@ -74,7 +74,7 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
+    defaultPivotSpace: 1
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
@@ -86,7 +86,7 @@ ScriptedImporter:
     fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
-    defaultPivotSpace: 0
+    defaultPivotSpace: 1
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
     spritePadding: 0
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638408349000113617
+  platformSettingsDirtyTick: 638438958441176827
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,8 +121,8 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Ganesha_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.074074075}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -141,8 +141,8 @@ ScriptedImporter:
     uvTransform: {x: 220, y: 75}
   - name: Ganesha_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -161,8 +161,8 @@ ScriptedImporter:
     uvTransform: {x: 292, y: 140}
   - name: Ganesha_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.07692308}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -181,8 +181,8 @@ ScriptedImporter:
     uvTransform: {x: 292, y: 202}
   - name: Ganesha_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -201,8 +201,8 @@ ScriptedImporter:
     uvTransform: {x: 364, y: 140}
   - name: Ganesha_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.074074075}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -221,8 +221,8 @@ ScriptedImporter:
     uvTransform: {x: 292, y: 75}
   - name: Ganesha_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -241,8 +241,8 @@ ScriptedImporter:
     uvTransform: {x: 436, y: 140}
   - name: Ganesha_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: -0.07692308}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -261,8 +261,8 @@ ScriptedImporter:
     uvTransform: {x: 364, y: 202}
   - name: Ganesha_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -281,8 +281,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 202}
   - name: Ganesha_Frame_8
     originalName: 
-    pivot: {x: 0.5, y: -0.074074075}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -301,8 +301,8 @@ ScriptedImporter:
     uvTransform: {x: 364, y: 75}
   - name: Ganesha_Frame_9
     originalName: 
-    pivot: {x: 0.48387095, y: -0.0754717}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -321,8 +321,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 263}
   - name: Ganesha_Frame_10
     originalName: 
-    pivot: {x: 0.5, y: -0.16981132}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -341,8 +341,8 @@ ScriptedImporter:
     uvTransform: {x: 213, y: 263}
   - name: Ganesha_Frame_11
     originalName: 
-    pivot: {x: 0.47368422, y: -0.16363636}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -361,8 +361,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 324}
   - name: Ganesha_Frame_12
     originalName: 
-    pivot: {x: 0.49122807, y: -0.16981132}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -381,8 +381,8 @@ ScriptedImporter:
     uvTransform: {x: 281, y: 263}
   - name: Ganesha_Frame_13
     originalName: 
-    pivot: {x: 0.52459013, y: -0.13207547}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -401,8 +401,8 @@ ScriptedImporter:
     uvTransform: {x: 144, y: 263}
   - name: Ganesha_Frame_14
     originalName: 
-    pivot: {x: 0.5, y: -0.11320755}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -421,8 +421,8 @@ ScriptedImporter:
     uvTransform: {x: 74, y: 263}
   - name: Ganesha_Frame_15
     originalName: 
-    pivot: {x: 0.5, y: -0.074074075}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -441,8 +441,8 @@ ScriptedImporter:
     uvTransform: {x: 436, y: 75}
   - name: Ganesha_Frame_16
     originalName: 
-    pivot: {x: 0.5, y: -0.074074075}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -461,8 +461,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 140}
   - name: Ganesha_Frame_17
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -481,8 +481,8 @@ ScriptedImporter:
     uvTransform: {x: 364, y: 4}
   - name: Ganesha_Frame_18
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -501,8 +501,8 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 4}
   - name: Ganesha_Frame_19
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -521,8 +521,8 @@ ScriptedImporter:
     uvTransform: {x: 220, y: 4}
   - name: Ganesha_Frame_20
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -541,8 +541,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Ganesha_Frame_21
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -561,8 +561,8 @@ ScriptedImporter:
     uvTransform: {x: 292, y: 4}
   - name: Ganesha_Frame_22
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -581,8 +581,8 @@ ScriptedImporter:
     uvTransform: {x: 148, y: 4}
   - name: Ganesha_Frame_23
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -601,8 +601,8 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 202}
   - name: Ganesha_Frame_24
     originalName: 
-    pivot: {x: 0.5, y: -0.074074075}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -621,8 +621,8 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 140}
   - name: Ganesha_Frame_25
     originalName: 
-    pivot: {x: 0.5, y: -0.07017544}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -641,8 +641,8 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 75}
   - name: Ganesha_Frame_26
     originalName: 
-    pivot: {x: 0.5, y: -0.071428575}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -661,8 +661,8 @@ ScriptedImporter:
     uvTransform: {x: 148, y: 75}
   - name: Ganesha_Frame_27
     originalName: 
-    pivot: {x: 0.5, y: -0.07017544}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -681,8 +681,8 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 75}
   - name: Ganesha_Frame_28
     originalName: 
-    pivot: {x: 0.5, y: -0.06896552}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -701,8 +701,8 @@ ScriptedImporter:
     uvTransform: {x: 436, y: 4}
   - name: Ganesha_Frame_29
     originalName: 
-    pivot: {x: 0.5, y: -0.074074075}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -721,8 +721,8 @@ ScriptedImporter:
     uvTransform: {x: 148, y: 140}
   - name: Ganesha_Frame_30
     originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -741,8 +741,8 @@ ScriptedImporter:
     uvTransform: {x: 148, y: 202}
   - name: Ganesha_Frame_31
     originalName: 
-    pivot: {x: 0.5, y: -0.07692308}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -761,8 +761,8 @@ ScriptedImporter:
     uvTransform: {x: 436, y: 202}
   - name: Ganesha_Frame_32
     originalName: 
-    pivot: {x: 0.5, y: -0.0754717}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -781,8 +781,8 @@ ScriptedImporter:
     uvTransform: {x: 220, y: 202}
   - name: Ganesha_Frame_33
     originalName: 
-    pivot: {x: 0.5, y: -0.074074075}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -801,8 +801,8 @@ ScriptedImporter:
     uvTransform: {x: 220, y: 140}
   - name: Ganesha_Frame_34
     originalName: 
-    pivot: {x: 0.48, y: -1.0476191}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -821,8 +821,8 @@ ScriptedImporter:
     uvTransform: {x: 346, y: 263}
   - name: Ganesha_Frame_35
     originalName: 
-    pivot: {x: 0.47619048, y: -0.79999995}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -841,8 +841,8 @@ ScriptedImporter:
     uvTransform: {x: 379, y: 263}
   - name: Ganesha_Frame_36
     originalName: 
-    pivot: {x: 0.48, y: -0.9047619}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -861,8 +861,8 @@ ScriptedImporter:
     uvTransform: {x: 346, y: 292}
   - name: Ganesha_Frame_37
     originalName: 
-    pivot: {x: 0.42857143, y: -0.71999997}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -881,8 +881,8 @@ ScriptedImporter:
     uvTransform: {x: 408, y: 263}
   - name: Ganesha_Frame_38
     originalName: 
-    pivot: {x: 1.1538461, y: -2}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -901,8 +901,8 @@ ScriptedImporter:
     uvTransform: {x: 457, y: 296}
   - name: Ganesha_Frame_39
     originalName: 
-    pivot: {x: 1.1538461, y: -2.2857144}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -921,8 +921,8 @@ ScriptedImporter:
     uvTransform: {x: 69, y: 324}
   - name: Ganesha_Frame_40
     originalName: 
-    pivot: {x: 1.1538461, y: -2}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -941,8 +941,8 @@ ScriptedImporter:
     uvTransform: {x: 478, y: 296}
   - name: Ganesha_Frame_41
     originalName: 
-    pivot: {x: 1.0714287, y: -2}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -961,8 +961,8 @@ ScriptedImporter:
     uvTransform: {x: 435, y: 296}
   - name: Ganesha_Frame_42
     originalName: 
-    pivot: {x: 0.47368422, y: -1.6666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -981,8 +981,8 @@ ScriptedImporter:
     uvTransform: {x: 408, y: 296}
   - name: Ganesha_Frame_43
     originalName: 
-    pivot: {x: 0.5714286, y: -1.6666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1001,8 +1001,8 @@ ScriptedImporter:
     uvTransform: {x: 379, y: 296}
   - name: Ganesha_Frame_44
     originalName: 
-    pivot: {x: 0.61538464, y: -1.6666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -1021,8 +1021,8 @@ ScriptedImporter:
     uvTransform: {x: 437, y: 263}
   - name: Ganesha_Frame_45
     originalName: 
-    pivot: {x: 0.625, y: -1.6666667}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 7
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2

@@ -6,18 +6,19 @@ using UnityEngine;
 public class PlayerLogic : MonoBehaviour
 {
     private PlayerModel _playerModel;
-    
-    public void Awake()
+
+    private void Start()
     {
         _playerModel = gameObject.GetComponentInParent<PlayerController>().playerModel;
-         
     }
 
     public void OnDamage(int value, Transform attacker)
     {
+        Debug.Log("데미지: " + value);
         var knockbackDirection = (transform.position - attacker.position).normalized; 
         Knockback(knockbackDirection);
         var damagedHp = _playerModel.Hp - value;
+        Debug.Log("남은 체력: " + damagedHp);
         if (damagedHp > 0)
         {
             _playerModel.Hp = damagedHp;
@@ -49,10 +50,10 @@ public class PlayerLogic : MonoBehaviour
         gameObject.GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
     }
     
-    public void StartUnDamage(int value, Transform attacker)
-    {
-        StartCoroutine(UnDamage());
-    }
+    // public void StartUnDamage(int value, Transform attacker)
+    // {
+    //     StartCoroutine(UnDamage());
+    // }
 
     IEnumerator UnDamage()
     {

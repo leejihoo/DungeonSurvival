@@ -12,15 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4f52f2db915294293273ca0fda2363, type: 3}
   m_Name: GreenGolem
   m_EditorClassIdentifier: 
-  MosterName: "\uADF8\uB9B0\uACE8\uB818"
-  Id: GreenGolem
-  Hp: 0
-  MoveSpeed: 0
-  ProjectileSpeed: 0
-  Atk: 0
-  Def: 0
-  DropItem: {fileID: 11400000, guid: 8d5a2c2a68bc61848adc0fd1528779b9, type: 2}
-  PatrolRange: 0
-  PatrolFov: 0
-  ChaseTime: 0
-  ViewDistance: 0
+  <MosterName>k__BackingField: "\uADF8\uB9B0\uACE8\uB818"
+  <Id>k__BackingField: GreenGolem
+  <Hp>k__BackingField: 15
+  <MoveSpeed>k__BackingField: 3
+  <ProjectileSpeed>k__BackingField: 0
+  <Atk>k__BackingField: 1
+  <Def>k__BackingField: 0
+  <DropItem>k__BackingField: {fileID: 11400000, guid: 8d5a2c2a68bc61848adc0fd1528779b9, type: 2}
+  <PatrolRange>k__BackingField: 10
+  <PatrolFov>k__BackingField: 45
+  <ChaseTime>k__BackingField: 5
+  <ViewDistance>k__BackingField: 5
+  <DeadSound>k__BackingField: {fileID: 8300000, guid: 07683c5faf4b450459757664ac9e5dee, type: 3}
+  <AttackSound>k__BackingField: {fileID: 8300000, guid: 4aac6c650a4111a4887febd02dbe4fd3, type: 3}
+  <AttackRange>k__BackingField: 0

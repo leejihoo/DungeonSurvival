@@ -12,15 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c4f52f2db915294293273ca0fda2363, type: 3}
   m_Name: TreeDeer
   m_EditorClassIdentifier: 
-  MosterName: "\uD2B8\uB9AC\uAC00\uB4DC"
-  Id: TreeDeer
-  Hp: 0
-  MoveSpeed: 0
-  ProjectileSpeed: 0
-  Atk: 0
-  Def: 0
-  DropItem: {fileID: 11400000, guid: d70c07392d5423e4589775f12a482906, type: 2}
-  PatrolRange: 0
-  PatrolFov: 0
-  ChaseTime: 0
-  ViewDistance: 0
+  <MosterName>k__BackingField: "\uD2B8\uB9AC\uAC00\uB4DC"
+  <Id>k__BackingField: TreeDeer
+  <Hp>k__BackingField: 15
+  <MoveSpeed>k__BackingField: 3
+  <ProjectileSpeed>k__BackingField: 4
+  <Atk>k__BackingField: 1
+  <Def>k__BackingField: 0
+  <DropItem>k__BackingField: {fileID: 11400000, guid: d70c07392d5423e4589775f12a482906, type: 2}
+  <PatrolRange>k__BackingField: 5
+  <PatrolFov>k__BackingField: 45
+  <ChaseTime>k__BackingField: 10
+  <ViewDistance>k__BackingField: 5
+  <DeadSound>k__BackingField: {fileID: 8300000, guid: ceea3539fdd7c614fbafd694ed0eb4da, type: 3}
+  <AttackSound>k__BackingField: {fileID: 8300000, guid: 8e8dfeab71460764a8d4bd4e78944e54, type: 3}
+  <AttackRange>k__BackingField: 10
