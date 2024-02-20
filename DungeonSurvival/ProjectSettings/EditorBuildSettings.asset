@@ -18,5 +18,9 @@ EditorBuildSettings:
     path: Assets/Level/Scenes/Level1/GrassLandLevel1_2.unity
     guid: 8be2786e13e059b4bb50de23737966a1
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: de4fe6c177d36bc4a83f50c19a55c77b, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: fd34f6f1e5a99f444aeee7690805b182, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: a1164405e8c39de48a3c86ba370db6b5, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 03ef166d8e4f6ba4a8230bb367e08f81, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 7412b040c096dc54aa20d0b3f48890d6, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: eb919a52f89b40c43843cec0431de02e, type: 2}
