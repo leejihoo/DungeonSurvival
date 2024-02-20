@@ -1,11 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
+    #region Inspector Fields
+    
     [Header("기본 정보")]
     public ProjectileSO projectileSO;
     
@@ -14,7 +12,16 @@ public class ProjectileController : MonoBehaviour
     [ReadOnly] public int atk;
     [ReadOnly] public float speed;
     
+    #endregion
+
+    #region Fields
+    
     protected Vector3 _direction;
+    
+    #endregion
+
+    #region Life Cycle
+    
     protected virtual void Awake()
     {
         if (projectileSO != null)
@@ -30,18 +37,12 @@ public class ProjectileController : MonoBehaviour
         SetDirection();
         RotateProjectileTowardsTarget();
     }
-
-    protected virtual void SetDirection()
-    {
-        var targetPos = GameObject.FindWithTag("Player").transform.position;
-        _direction = (targetPos - transform.position).normalized;
-    }
-
+    
     protected virtual void Update()
     {
         transform.Translate(_direction * Time.deltaTime * speed, Space.World);
     }
-
+    
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Monster"))
@@ -58,6 +59,16 @@ public class ProjectileController : MonoBehaviour
         Destroy(gameObject);
     }
 
+    #endregion
+
+    #region Functions
+    
+    protected virtual void SetDirection()
+    {
+        var targetPos = GameObject.FindWithTag("Player").transform.position;
+        _direction = (targetPos - transform.position).normalized;
+    }
+    
     protected void PlayAttackSound(Transform target)
     {
         SoundManager.Instance.PlaySfxAt(target.position,projectileSO.AttackSound,false);
@@ -70,4 +81,6 @@ public class ProjectileController : MonoBehaviour
         
         transform.rotation = targetRotation;
     }
+    
+    #endregion
 }

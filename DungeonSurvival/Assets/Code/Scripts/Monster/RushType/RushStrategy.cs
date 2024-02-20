@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 public class RushStrategy : MoveStrategy
@@ -19,6 +17,6 @@ public class RushStrategy : MoveStrategy
         float distance = Vector3.Distance(_mover.position, _target.position);
         float duration = distance / (_moveSpeed * 2f);
         ((RushTypeMonsterVisual)_visual).RushAnimationSpeedUp(duration);
-        _mover.DOMove(_target.position, duration).SetEase(Ease.InOutQuad).OnComplete(OnRushComplete.Invoke);
+        _mover.DOMove(_target.position, duration).SetEase(Ease.InOutQuad).OnComplete(OnRushComplete.Invoke).OnPause(OnRushComplete.Invoke);
     }
 }

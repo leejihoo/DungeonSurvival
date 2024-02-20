@@ -1,21 +1,28 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
 public class RushTypeMonsterController : NormalMonsterController
 {
+    #region Inspector Fields
+    
     [Header("돌진형 몬스터 추가 정보")]
     [Tooltip("다음 돌진까지 필요한 시간이다. (default: 3초)")]
     [SerializeField] private float rushDelay;
     [Tooltip("돌진을 한 뒤 측정되는 시간의 합이다. rushDelay보다 커지면 몬스터가 돌진을 하고 0으로 바뀐다.")]
     [SerializeField, ReadOnly] private float accumulationRushTime;
     
+    #endregion
+
+    #region Fields
+    
     private RushStrategy _rushStrategy;
     // exit가 작동되는 동안에도 update는 계속 작동되고 있어서 exit에서 바꾼 값이 update로 다시 바뀌는 현상을 방지하기 위한 변수
     private bool _isAttackStateExit;
     private bool _isRushCompleted;
+    
+    #endregion
+
+    #region Life Cycle
     
     protected override void Awake()
     {
@@ -38,6 +45,16 @@ public class RushTypeMonsterController : NormalMonsterController
         transform.DOKill();
         _rushStrategy.OnRushComplete -= RushComplete;
     }
+    
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        // DoMove를 사용했을 때 collider를 무시하는 걸 방지하기 위한 코드
+        transform.DOPause();
+    }
+
+    #endregion
+
+    #region Functions
 
     public void Rush()
     {
@@ -50,9 +67,12 @@ public class RushTypeMonsterController : NormalMonsterController
 
     public void RushComplete()
     {
+        Debug.Log("러쉬 완료");
         _isRushCompleted = true;
     }
 
+    #region MoveState
+    
     public override void EnterMoveState()
     {
         _visual.ChangeWarningMark(false);
@@ -75,11 +95,19 @@ public class RushTypeMonsterController : NormalMonsterController
         PlayAttackAnimation(StateType.Move);
     }
 
+    #endregion
+
+    #region DieState
+    
     public override void EnterDieState()
     {
         OnDie.Invoke();
     }
 
+    #endregion
+
+    #region AttackState
+    
     public override void EnterAttackState()
     {
         _isAttackStateExit = false;
@@ -93,21 +121,11 @@ public class RushTypeMonsterController : NormalMonsterController
         accumulationRushTime += Time.deltaTime;
         _accumulationChaseTime += Time.deltaTime;
         
-        if (accumulationRushTime >= rushDelay && !_isAttackStateExit)
+        if (accumulationRushTime >= rushDelay && !_isAttackStateExit && _isRushCompleted)
         {
             accumulationRushTime = 0;
             Rush();
         }
-
-        // if (isRushCompleted)
-        // {
-        //     Chase();
-        // }
-        // else
-        // {
-        //     accumulationChaseTime += Time.deltaTime;
-        // }
-            
     }
 
     public override void ExitAttackState()
@@ -118,6 +136,10 @@ public class RushTypeMonsterController : NormalMonsterController
         PlayMoveAnimation(StateType.Attack);
     }
 
+    #endregion
+
+    #region IdleState
+    
     public override void EnterIdleState()
     {
         StartCoroutine(StartIdleTimer());    
@@ -139,9 +161,7 @@ public class RushTypeMonsterController : NormalMonsterController
         PlayAttackAnimation(StateType.Idle);
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        // DoMove를 사용했을 때 collider를 무시하는 걸 방지하기 위한 코드
-        transform.DOPause();
-    }
+    #endregion
+    
+    #endregion
 }

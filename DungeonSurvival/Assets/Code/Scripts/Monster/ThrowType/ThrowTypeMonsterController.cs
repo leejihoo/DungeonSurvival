@@ -1,9 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ThrowTypeMonsterController : NormalMonsterController
 {
+    #region Inspector Fields
+    
     [Header("투척형 몬스터 추가 정보")]
     public GameObject projectile;
     [SerializeField] private Vector3 projectileInitPosChange;
@@ -13,9 +14,17 @@ public class ThrowTypeMonsterController : NormalMonsterController
     [SerializeField, ReadOnly] private float accumulationShootTime;
     [SerializeField, ReadOnly] private bool isAttackAnimationEnd;
     
+    #endregion
+
+    #region Fields
+    
     // exit가 작동되는 동안에도 update는 계속 작동되고 있어서 exit에서 바꾼 값이 update로 다시 바뀌는 현상을 방지하기 위한 변수
     private bool _isAttackStateExit;
 
+    #endregion
+
+    #region Life Cycle
+    
     protected override void Awake()
     {
         base.Awake();
@@ -26,7 +35,6 @@ public class ThrowTypeMonsterController : NormalMonsterController
         
         accumulationShootTime = shootDelay;
         ((ThrowTypeMonsterVisual)_visual).OnchargeRaise += OnCharge;
-        
     }
 
     protected override void OnDrawGizmos()
@@ -36,22 +44,21 @@ public class ThrowTypeMonsterController : NormalMonsterController
         GetComponent<NormalMonsterDebug>().DrawAttackRange(_model.AttackRange);
     }
 
+    protected override void OnDestroy()
+    {
+        ((ThrowTypeMonsterVisual)_visual).OnchargeRaise -= OnCharge;
+    }
+
+    #endregion
+
+    #region Functions
+    
     public void OnCharge()
     {
         var instant = Instantiate(projectile, transform.position - projectileInitPosChange, transform.rotation);
-        //_logic.ChangeVisualDirectionTowardTarget(instant.transform, _player, -1);
-        // instant.GetComponent<ProjectileController>().atk = 3;
-        // instant.GetComponent<ProjectileController>().speed = 3;
-    }
-    
-    IEnumerator StartAttackAnimation()
-    {
-        isAttackAnimationEnd = false;
-        yield return new WaitForSeconds(((ThrowTypeMonsterVisual)_visual).AttackAnimationTime);
-        isAttackAnimationEnd = true;
     }
 
-    #region StateFunc
+    #region MoveState
     
     public override void EnterMoveState()
     {
@@ -75,11 +82,19 @@ public class ThrowTypeMonsterController : NormalMonsterController
         PlayAttackAnimation(StateType.Move);
     }
 
+    #endregion
+
+    #region DieState
+    
     public override void EnterDieState()
     {
         OnDie.Invoke();
     }
 
+    #endregion
+
+    #region AttackState
+    
     public override void EnterAttackState()
     {
         _isAttackStateExit = false;
@@ -130,6 +145,10 @@ public class ThrowTypeMonsterController : NormalMonsterController
         PlayMoveAnimation(StateType.Attack);
     }
 
+    #endregion
+
+    #region IdleState
+    
     public override void EnterIdleState()
     {
         StartCoroutine(StartIdleTimer());    
@@ -149,6 +168,19 @@ public class ThrowTypeMonsterController : NormalMonsterController
         }
         
         PlayAttackAnimation(StateType.Idle);
+    }
+
+    #endregion
+    
+    #endregion
+
+    #region Coroutine
+    
+    IEnumerator StartAttackAnimation()
+    {
+        isAttackAnimationEnd = false;
+        yield return new WaitForSeconds(((ThrowTypeMonsterVisual)_visual).AttackAnimationTime);
+        isAttackAnimationEnd = true;
     }
     
     #endregion

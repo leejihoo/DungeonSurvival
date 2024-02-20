@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
 public class RushTypeMonsterVisual : NormalMonsterVisual
 {
-    private int _rushSpeedHash; // 애니메이션 파라미터의 이름
+    private int _rushSpeedHash; 
     private float _maxSpeed;
-    private float initialSpeed; // 초기 속도
+    private float initialSpeed;
     public AnimationCurve rushSpeedAnimationCurve;
+    
     protected override void Awake()
     {
         base.Awake();

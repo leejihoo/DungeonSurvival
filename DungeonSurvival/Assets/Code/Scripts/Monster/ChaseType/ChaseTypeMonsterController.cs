@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
-using UnityEngine;
-
 public class ChaseTypeMonsterController : NormalMonsterController
 {
+    #region Functions
+
+    #region MoveState
+    
     public override void EnterMoveState()
     {
         _visual.ChangeWarningMark(false);
@@ -27,11 +26,19 @@ public class ChaseTypeMonsterController : NormalMonsterController
         PlayAttackAnimation(StateType.Move);
     }
 
+    #endregion
+
+    #region DieState
+    
     public override void EnterDieState()
     {
         OnDie.Invoke();
     }
 
+    #endregion
+
+    #region AttackState
+    
     public override void EnterAttackState()
     {
         _visual.ChangeWarningMark(true);
@@ -49,6 +56,10 @@ public class ChaseTypeMonsterController : NormalMonsterController
         PlayMoveAnimation(StateType.Attack);
     }
 
+    #endregion
+
+    #region IdleState
+    
     public override void EnterIdleState()
     {
         StartCoroutine(StartIdleTimer());    
@@ -69,4 +80,8 @@ public class ChaseTypeMonsterController : NormalMonsterController
         
         PlayAttackAnimation(StateType.Idle);
     }
+    
+    #endregion
+    
+    #endregion
 }

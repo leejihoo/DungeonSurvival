@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class NormalMonsterDieState : NormalMonsterState
 {
     public NormalMonsterDieState(INormalMonsterController controller)
@@ -23,5 +19,4 @@ public class NormalMonsterDieState : NormalMonsterState
     {
         _controller.ExitDieState();
     }
-    
 }

@@ -1,11 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
 public class NormalMosterModel
 {
+    #region Inspector Fields
+    
     [field: Header("기본 정보")]
     [field: SerializeField] public string MosterName { get; set; }
     [field: SerializeField] public string Id { get; set; }
@@ -35,6 +35,10 @@ public class NormalMosterModel
 
     [field: SerializeField] public ScriptableObject DropItem { get; set; }
     
+    #endregion
+
+    #region Constructor
+    
     public NormalMosterModel(MonsterSO monsterSo)
     {
         if (monsterSo != null)
@@ -51,4 +55,6 @@ public class NormalMosterModel
             Debug.LogError("사용 불가능한 SO입니다.");
         }
     }
+    
+    #endregion
 }
