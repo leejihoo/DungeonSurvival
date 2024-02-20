@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -83,8 +82,7 @@ public class MonsterPrefabCreatorEditorWindow : EditorWindow
         createButton.clicked += () => { ClickCreationButton(monsterInfoBox); };
         root.Add(createButton);
     }
-    //monsterTypeDropdownField.value, monsterSO,monsterPrefabFrame, monsterSprite,monsterAnimator,projectile
-    //ObjectField monsterSO, ObjectField monsterPrefabFrame, ObjectField monsterSprite, ObjectField monsterAnimator, ObjectField projectile
+
     public void ClickCreationButton(Box monsterInfoBox)
     {
         var nullReferenceField = monsterInfoBox.Children().Where(child => ((ObjectField)child).value == null).ToList();

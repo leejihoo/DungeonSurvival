@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using Unity.Notifications;
 using UnityEditor;
 using UnityEditor.Animations;
 using UnityEditor.UIElements;
@@ -67,7 +63,6 @@ public class ProjectilePrefabCreatorEditorWindow : EditorWindow
             ClickCreationButton(projectileInfoBox);
         };
         root.Add(createButton);
-        
     }
 
     public void ClickCreationButton(Box projectileInfoBox)

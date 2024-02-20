@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.UIElements;
@@ -77,11 +75,8 @@ public class ItemPrefabCreatorEditorWindow : EditorWindow
                 AssetDatabase.GenerateUniqueAssetPath($"Assets/Prefabs/PrefabsWorld/{text.value}World.prefab");
             PrefabUtility.SaveAsPrefabAsset(frameWorld, frameWorldPath);
             ((ItemSO)itemSO.value).VisualWorldPrefab = AssetDatabase.LoadAssetAtPath(frameWorldPath,typeof(GameObject)) as GameObject;
-            // var temp = new SerializedObject((ItemSO)itemSO.value);
-            // temp.ApplyModifiedProperties();
         };
-        
+
         root.Add(creationButton);
     }
-    
 }
