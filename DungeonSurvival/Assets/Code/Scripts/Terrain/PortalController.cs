@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,7 +14,6 @@ public class PortalController : MonoBehaviour
         coveringTime = 2f;
         var player = GameObject.Find("Player");
         player.transform.position = respondPos.position;
-        Debug.Log("작동");
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -26,19 +23,10 @@ public class PortalController : MonoBehaviour
 
     IEnumerator StartLoadScene()
     {
-        // float currentTime = 0;
-        // while (currentTime < coveringTime)
-        // {
-        //     currentTime += Time.deltaTime;
-        //     //coverMaterial.SetFloat("_Progress",Mathf.cla);
-        //     
-        // }
         coverMaterial.DOFloat(0f, "_Progress", coveringTime).OnComplete(() =>
         {
             SceneManager.LoadScene(nextSceneName);
         });
         yield return null;
     }
-    
-    
 }
