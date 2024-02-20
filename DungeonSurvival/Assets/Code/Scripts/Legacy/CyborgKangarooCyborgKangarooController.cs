@@ -106,7 +106,7 @@ public class CyborgKangarooCyborgKangarooController : MonoBehaviour, ICyborgKang
 
     public void Collision(Collision2D col)
     {
-        if (col.transform.CompareTag("Player") && !PlayerController._isDamaged)
+        if (col.transform.CompareTag("Player") && !PlayerController.IsDamaged)
         {
             PlayCollisionSound(col.transform.position);
             Debug.Log("데미지 받는중");

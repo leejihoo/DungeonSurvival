@@ -207,7 +207,7 @@ public abstract class NormalMonsterController : MonoBehaviour, INormalMonsterCon
     
     public virtual void Collision(Collision2D col)
     {
-        if (col.transform.CompareTag("Player") && !PlayerController._isDamaged && !_isCollision)
+        if (col.transform.CompareTag("Player") && !PlayerController.IsDamaged && !_isCollision)
         {
             StartCoroutine(CollsionDelay());
             PlayCollisionSound(col.transform.position);

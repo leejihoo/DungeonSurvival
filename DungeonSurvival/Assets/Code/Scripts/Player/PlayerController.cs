@@ -3,26 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
-using UnityEngine.InputSystem.UI;
 using UnityEngine.SceneManagement;
-using Object = UnityEngine.Object;
-using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
-using TouchPhase = UnityEngine.TouchPhase;
 
 public class PlayerController : Singleton<PlayerController>
 {
-    public InputActionAsset InputAction;
-    public InputActionAsset temp;
-    [SerializeField] private float speed;
-    [SerializeField] private InventoryHandler inventoryHandler;
-    [SerializeField] private GameObject inventory;
+    #region Inspector Fields
+    
+    public InputActionAsset inputAction;
     public PlayerModel playerModel;
+    [SerializeField] private float speed;
+    [SerializeField] private InventoryController inventoryController;
+    [SerializeField] private GameObject inventory;
     [SerializeField] private PlayerSO defaultPlayerSO;
     [SerializeField] private GameObject arrow;
     [SerializeField] private float attackDelay;
@@ -30,39 +24,54 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private GameObject axe;
     [SerializeField] private GameObject cissor;
     
-    private InputAction m_MoveAction;
-    private Animator m_Animator;
-    private Rigidbody2D m_Rigidbody;
+    // 나중에 sceneManager class를 만들어서 분리해줘야됨.
+    [SerializeField] private Material coverMaterial;
+    
+    #endregion
+
+    #region Fields
+    
+    private InputAction _moveAction;
+    private Animator _animator;
     private InputAction interact;
     private PlayerVisual _playerVisual;
     private PlayerLogic _playerLogic;
-    private float prevX = 1.0f;
     private GameObject currentTarget;
-    private bool _isEndAttackDelay;
     private GameObject _currentWearingTool;
+    private bool _isEndAttackDelay;
+    private float prevX = 1.0f;
+    
+    public static bool IsDamaged;
+    
+    #endregion
+
+    #region Events
     
     public static UnityAction<int, Transform> OnDamage;
     public static UnityAction OnDie;
-    public static bool _isDamaged;
     
-    // 나중에 sceneManager class를 만들어서 분리해줘야됨.
-    [SerializeField] private Material coverMaterial;
+    #endregion
+
+    #region Life Cycle
     
     public override void Awake()
     {
         base.Awake();
+        
         _playerVisual = gameObject.GetComponentInChildren<PlayerVisual>();
         _playerLogic = gameObject.GetComponentInChildren<PlayerLogic>();
         playerModel = new PlayerModel(defaultPlayerSO);
-        m_MoveAction = InputAction.FindAction("Gameplay/Move");
-        m_MoveAction.Enable();
-
-        m_Rigidbody = GetComponent<Rigidbody2D>();
-        m_Animator = GetComponentInChildren<Animator>();
+        _moveAction = inputAction.FindAction("Gameplay/Move");
+        _moveAction.Enable();
+        
+        _animator = GetComponentInChildren<Animator>();
         _isEndAttackDelay = true;
+        
+        inventoryController.inventoryData = new Dictionary<string, InventoryItemData>();
+        inventoryController.isSlotEmpty = new bool[inventoryController.maxInventorySize];
+        Array.Fill(inventoryController.isSlotEmpty,true);
     }
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         OnDamage += _playerLogic.OnDamage;
@@ -78,7 +87,6 @@ public class PlayerController : Singleton<PlayerController>
         OnDie -= _playerVisual.OnDie;
     }
     
-        
     // 나중에 sceneManager class를 만들어서 분리해줘야됨.
     private void OnEnable()
     {
@@ -90,12 +98,6 @@ public class PlayerController : Singleton<PlayerController>
         SceneManager.sceneLoaded -= FadeIn;
     }
     
-    public void FadeIn(Scene scene, LoadSceneMode mode)
-    {
-        GetComponentInChildren<Canvas>().worldCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
-        coverMaterial.DOFloat(1f, "_Progress", 2f);
-    }
-
     private void Update()
     {
         if (Keyboard.current.iKey.wasPressedThisFrame)
@@ -145,7 +147,6 @@ public class PlayerController : Singleton<PlayerController>
             _currentWearingTool.SetActive(true);
         }
         
-
         if (Keyboard.current.ctrlKey.wasPressedThisFrame)
         {
             // 장비들을 객체화 한 다음 실제 실행되는 로직들은 장비들한테 넘겨주면 좋을듯
@@ -159,7 +160,7 @@ public class PlayerController : Singleton<PlayerController>
                 {
                     if (_isEndAttackDelay)
                     {
-                        m_Animator.SetTrigger("IsAttack");
+                        _animator.SetTrigger("IsAttack");
                         var instant = Instantiate(arrow, transform.position + new Vector3(0,1.5f,0), transform.rotation);
                         instant.GetComponent<ArrowController>().target = currentTarget.transform;
                         StartCoroutine(StartAttackDelay());
@@ -173,16 +174,16 @@ public class PlayerController : Singleton<PlayerController>
             else if (_currentWearingTool == cissor)
             {
                 var collectHash = Animator.StringToHash("IsCollect");
-                m_Animator.SetBool(collectHash,true);
+                _animator.SetBool(collectHash,true);
             }
             else if (_currentWearingTool == axe)
             {
                 var mineHash = Animator.StringToHash("IsMine");
-                m_Animator.SetBool(mineHash,true);
+                _animator.SetBool(mineHash,true);
             }
-
         }
 
+        // 마물 자동 타겟
         var colliders = Physics2D.OverlapCircleAll(transform.position, 10);
         if (colliders != null)
         {
@@ -224,27 +225,16 @@ public class PlayerController : Singleton<PlayerController>
             currentTarget.GetComponentInChildren<NormalMonsterVisual>().TurnOffOutline();
             currentTarget = null;
         }
-        
-        // foreach (var col in colliders)
-        // {
-        //     if (col.CompareTag("Monster"))
-        //     {
-        //         var distanceToCurrentTarget = Vector3.Distance(transform.position, currentTarget.transform.position);
-        //         var distanceToOtherTarget = Vector3.Distance(transform.position, col.transform.position);
-        //     }
-        // }
     }
 
     void FixedUpdate()
     {
-        var move = m_MoveAction.ReadValue<Vector2>();
+        var move = _moveAction.ReadValue<Vector2>();
         var movement = move * speed;
         var moveHash = Animator.StringToHash("IsMove");
-        var speedHash = Animator.StringToHash("Speed");
         var collectHash = Animator.StringToHash("IsCollect");
         var mineHash = Animator.StringToHash("IsMine");
         
-        //note: == and != for vector2 is overriden to take in account floating point imprecision.
         if (move != Vector2.zero)
         {
             if (move.x * prevX < 0)
@@ -253,23 +243,21 @@ public class PlayerController : Singleton<PlayerController>
                 prevX = move.x;
             }
 
-            m_Animator.SetBool(collectHash,false);
-            m_Animator.SetBool(mineHash,false);
-            m_Animator.SetBool(moveHash, true);
-            //m_Rigidbody.MovePosition(m_Rigidbody.position + movement * Time.deltaTime);
+            _animator.SetBool(collectHash,false);
+            _animator.SetBool(mineHash,false);
+            _animator.SetBool(moveHash, true);
             transform.Translate(movement * Time.deltaTime);
             return;
         }
         
-        m_Animator.SetBool(moveHash, false);
-
+        _animator.SetBool(moveHash, false);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Item"))
         {
-            inventoryHandler.UpdateItem(col.GetComponent<SOContainer>().item);
+            inventoryController.UpdateItem(col.GetComponent<SOContainer>().item);
         }
     }
 
@@ -278,17 +266,28 @@ public class PlayerController : Singleton<PlayerController>
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position,10);
     }
+    
+    #endregion
 
+    #region Functions
+    
+    // 나중에 sceneManager로 분리해야 됨.
+    public void FadeIn(Scene scene, LoadSceneMode mode)
+    {
+        GetComponentInChildren<Canvas>().worldCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        coverMaterial.DOFloat(1f, "_Progress", 2f);
+    }
+
+    #endregion
+
+    #region Coroutine
+    
     IEnumerator StartAttackDelay()
     {
-        Debug.Log("공격딜레이 시작");
         _isEndAttackDelay = false;
         yield return new WaitForSeconds(attackDelay);
         _isEndAttackDelay = true;
-        // if (_isEndAttackDelay)
-        // {
-        //     
-        // }
-        Debug.Log("공격딜레이 끝");
     }
+    
+    #endregion
 }

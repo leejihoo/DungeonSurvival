@@ -4,6 +4,8 @@ using UnityEngine;
 [Serializable]
 public class PlayerModel
 {
+    #region Inspector Fields
+    
     [field: SerializeField] public float Speed { get; set; }
     [field: SerializeField] public float AtkSpeed { get; set; }
     [field: SerializeField] public int Atk { get; set; }
@@ -15,6 +17,11 @@ public class PlayerModel
     [field: SerializeField] public float BranchCollectionSpeed { get; set; }
     [field: SerializeField] public int Hp { get; set; }
     [field: SerializeField] public int Fullness { get; set; }
+    
+    #endregion
+
+    #region Constructor
+    
     public PlayerModel(PlayerSO playerSO)
     {
         if (playerSO != null)
@@ -35,4 +42,6 @@ public class PlayerModel
             Debug.LogError("Invalid PlayerSO provided to PlayerModel constructor.");
         }
     }
+    
+    #endregion
 }

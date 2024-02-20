@@ -1,21 +1,23 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerVisual : MonoBehaviour
 {
+    #region Inspector Fields
+    
     [SerializeField] private GameObject hpHolder;
     [SerializeField] private GameObject heart;
 
+    #endregion
+
+    #region Functions
+    
     public void InitHp(int count)
     {
         while(count > 0)
         {
             Instantiate(heart, hpHolder.transform);
             count--;
-            
         }
     }
 
@@ -41,24 +43,22 @@ public class PlayerVisual : MonoBehaviour
         {
             Destroy(hpHolder.transform.GetChild(childCount - (i+1)).gameObject);
         }
-        Debug.Log("사망");
     }
 
+    #endregion
+
+    #region Coroutines
+    
     IEnumerator DamageEffect()
     {
         for (int i = 0; i < 5; i++)
         {
-            //Debug.Log("데미지 비쥬얼 작동중");
             var spriteRenderers = transform.GetComponentsInChildren<SpriteRenderer>();
             foreach (var spriteRenderer in spriteRenderers)
             {
                 spriteRenderer.color = new Color(1, 1f, 1f, 0.7f);
             }
-            //transform.GetComponent<SpriteRenderer>().color = new Color(1,1f,1f,0.7f);
             yield return new WaitForSeconds(0.1f);
-            //transform.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-            // transform.GetComponentsInChildren<SpriteRenderer>()
-            //     .Select(child => child.color = new Color(1, 1f, 1f, 1f));
             foreach (var spriteRenderer in spriteRenderers)
             {
                 spriteRenderer.color = new Color(1, 1f, 1f, 1f);
@@ -67,9 +67,5 @@ public class PlayerVisual : MonoBehaviour
         }
     }
     
-    private void AttackExit()
-    {
-        Debug.Log("공격 종료");
-        GetComponent<Animator>().ResetTrigger("IsAttack");
-    }
+    #endregion
 }

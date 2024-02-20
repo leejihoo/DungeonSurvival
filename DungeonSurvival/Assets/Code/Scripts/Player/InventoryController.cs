@@ -1,24 +1,19 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class InventoryHandler : MonoBehaviour
-{
-    private Dictionary<string, InventoryItemData> _inventoryData = new Dictionary<string, InventoryItemData>();
-    private const int MaxInventorySize = 12;
-    private bool[] _isSlotEmpty = new bool[MaxInventorySize] {true,true,true,true,true,true,true,true,true,true,true,true};
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public class InventoryController : MonoBehaviour
+{
+    #region Fields
+    
+    public Dictionary<string, InventoryItemData> inventoryData;
+    public int maxInventorySize = 12;
+    public bool[] isSlotEmpty;
+
+    #endregion
+    
+    #region Functions
 
     public void UpdateItem(ItemSO itemSo)
     {
@@ -30,7 +25,7 @@ public class InventoryHandler : MonoBehaviour
         
         if (CheckItemExist(itemSo.Id))
         {
-            var inventoryitemData = _inventoryData[itemSo.Id];
+            var inventoryitemData = inventoryData[itemSo.Id];
             inventoryitemData.count += 1;
             UpdateItemCount(inventoryitemData);
             return;
@@ -38,23 +33,23 @@ public class InventoryHandler : MonoBehaviour
 
         int usableSlotIndex = FindUsableSlotIndex();
 
-        _isSlotEmpty[usableSlotIndex] = false;
+        isSlotEmpty[usableSlotIndex] = false;
         var newInventoryItemData = new InventoryItemData(1,usableSlotIndex);
 
-        _inventoryData.Add(itemSo.Id, newInventoryItemData);
+        inventoryData.Add(itemSo.Id, newInventoryItemData);
         
-        var itemUI = Instantiate(itemSo.UIPrefab,transform.GetChild(newInventoryItemData.slotIndex), false);
+        Instantiate(itemSo.UIPrefab,transform.GetChild(newInventoryItemData.slotIndex), false);
         transform.GetChild(newInventoryItemData.slotIndex).GetComponentInChildren<TMP_Text>().text = newInventoryItemData.count.ToString();
     }
 
     public bool CheckInventoryUsable()
     {
-        return _inventoryData.Count <= MaxInventorySize;
+        return inventoryData.Count <= maxInventorySize;
     }
 
     public bool CheckItemExist(string itemId)
     {
-        return _inventoryData.ContainsKey(itemId);
+        return inventoryData.ContainsKey(itemId);
     }
 
     public void UpdateItemCount(InventoryItemData inventoryItemData)
@@ -66,7 +61,7 @@ public class InventoryHandler : MonoBehaviour
     public int FindUsableSlotIndex()
     {
         int usableSlotIndex = 0;
-        foreach (var slot in _isSlotEmpty)
+        foreach (var slot in isSlotEmpty)
         {
             if (slot)
             {
@@ -78,6 +73,8 @@ public class InventoryHandler : MonoBehaviour
 
         return usableSlotIndex;
     }
+    
+    #endregion
 }
 
 public class InventoryItemData
