@@ -1,21 +1,33 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NormalMonsterDebug : MonoBehaviour
 {
+    #region Fields
+    
+    // editor에서 접근해야되서 접근자를 public 설정. inspector에서 변경 불가능하도록 ReadOnly를 사용
     [ReadOnly] public NormalMonsterController controller;
+    
+    #endregion
+
+    #region Inspector Fields
     
     [Space(10)]
     [Header("임시 데미지")]
     public int tempDamage;
 
+    #endregion
+
+    #region Life Cycle
+    
     private void Awake()
     {
         controller = GetComponent<NormalMonsterController>();
     }
 
+    #endregion
+
+    #region Functions
+    
     public void DrawDetectionCone(Transform player, float detectionAngle, float detectionRadius)
     {
         if (player == null)
@@ -58,4 +70,6 @@ public class NormalMonsterDebug : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(position, attackRange);
     }
+    
+    #endregion
 }
