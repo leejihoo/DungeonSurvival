@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,5 +16,4 @@ public class SoundSO : ScriptableObject
             soundDictionary.Add(clip.name, clip);
         }
     }
-
 }
