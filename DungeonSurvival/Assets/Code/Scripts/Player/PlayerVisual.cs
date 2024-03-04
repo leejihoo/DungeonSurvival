@@ -44,6 +44,11 @@ public class PlayerVisual : MonoBehaviour
             Destroy(hpHolder.transform.GetChild(childCount - (i+1)).gameObject);
         }
     }
+    
+    private void AttackExit()
+    {
+        GetComponent<Animator>().ResetTrigger("IsAttack");
+    }
 
     #endregion
 
