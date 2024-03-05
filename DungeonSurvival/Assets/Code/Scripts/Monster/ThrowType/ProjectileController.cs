@@ -16,7 +16,7 @@ public class ProjectileController : MonoBehaviour
 
     #region Fields
     
-    protected Vector3 _direction;
+    public Vector3 _direction;
     
     #endregion
 

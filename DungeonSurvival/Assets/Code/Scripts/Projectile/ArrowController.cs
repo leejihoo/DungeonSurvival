@@ -29,7 +29,10 @@ public class ArrowController : ProjectileController
     
     protected override void SetDirection()
     {
-        _direction = (target.position - transform.position).normalized;
+        if (target != null)
+        {
+            _direction = (target.position - transform.position).normalized;
+        }
     }
     
     public override void RotateProjectileTowardsTarget()
