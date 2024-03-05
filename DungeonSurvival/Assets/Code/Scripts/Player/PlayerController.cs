@@ -82,6 +82,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnDestroy()
     {
+        _moveAction.Disable();
         OnDamage -= _playerLogic.OnDamage;
         OnDamage -= _playerVisual.OnDamage;
         OnDie -= _playerVisual.OnDie;
