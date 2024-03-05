@@ -18,7 +18,8 @@ public class PortalController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        StartCoroutine(StartLoadScene());
+        if(col.CompareTag("Player"))
+            StartCoroutine(StartLoadScene());
     }
 
     IEnumerator StartLoadScene()
