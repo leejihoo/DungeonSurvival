@@ -26,6 +26,11 @@ public class ButtonTest : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
     private void OnDestroy()
     {
+        
+    }
+
+    private void OnApplicationQuit()
+    {
         skillAction.Disable();
     }
 

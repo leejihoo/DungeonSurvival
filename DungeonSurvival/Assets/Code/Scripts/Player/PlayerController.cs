@@ -74,6 +74,7 @@ public class PlayerController : Singleton<PlayerController>
     
     void Start()
     {
+        Debug.Log("플레이어 시작 함수 작동");
         OnDamage += _playerLogic.OnDamage;
         OnDamage += _playerVisual.OnDamage;
         OnDie += _playerVisual.OnDie;
@@ -82,12 +83,18 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnDestroy()
     {
+        
+    }
+
+    private void OnApplicationQuit()
+    {
+        Debug.Log("게임 종료");
         _moveAction.Disable();
         OnDamage -= _playerLogic.OnDamage;
         OnDamage -= _playerVisual.OnDamage;
         OnDie -= _playerVisual.OnDie;
     }
-    
+
     // 나중에 sceneManager class를 만들어서 분리해줘야됨.
     private void OnEnable()
     {
