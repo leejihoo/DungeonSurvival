@@ -15,15 +15,15 @@ MonoBehaviour:
   <MosterName>k__BackingField: "\uADF8\uB9B0\uC2AC\uB77C\uC784"
   <Id>k__BackingField: GreenSlime
   <Hp>k__BackingField: 2
-  <MoveSpeed>k__BackingField: 3
+  <MoveSpeed>k__BackingField: 1
   <ProjectileSpeed>k__BackingField: 0
   <Atk>k__BackingField: 1
   <Def>k__BackingField: 0
   <DropItem>k__BackingField: {fileID: 11400000, guid: ddf2562a9b52dec4a9477dcab5f72d8c, type: 2}
-  <PatrolRange>k__BackingField: 10
+  <PatrolRange>k__BackingField: 5
   <PatrolFov>k__BackingField: 45
   <ChaseTime>k__BackingField: 5
-  <ViewDistance>k__BackingField: 5
+  <ViewDistance>k__BackingField: 2
   <DeadSound>k__BackingField: {fileID: 8300000, guid: 6a51f23f2c148714f8faf0f545cb0798, type: 3}
   <AttackSound>k__BackingField: {fileID: 8300000, guid: b3095633783a3824c8bb22d5c7a3fc83, type: 3}
   <AttackRange>k__BackingField: 0
